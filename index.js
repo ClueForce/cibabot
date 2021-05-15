@@ -1,9 +1,26 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const fs = require('fs');
-const config = require('./config.json');
 client.config = config
 const newUsers = [];
+const client = new Discord.Client({ disableMentions: 'everyone' });
+const Eco = require("quick.eco");
+client.eco = new Eco.Manager(); // quick.eco
+client.db = Eco.db; // quick.db
+client.config = require("./config");
+client.commands = new Discord.Collection();
+client.aliases = new Discord.Collection();
+client.shop = {
+  laptop: {
+    cost: 2000
+  },
+  mobile: {
+    cost: 1000
+  },
+  pc: {
+    cost: 3000
+  }
+}
 
 //testing welcome
 client.on("guildMemberAdd", (member) => {
@@ -22,21 +39,6 @@ client.on("guildMemberRemove", (member) => {
   const guild = member.guild;
   if (newUsers[guild.id].has(member.id)) newUsers.delete(member.id);
 });
-
-//ClueForce Uptime//
-
-const http = require("http");
-const express = require("express");
-const app = express();
-var server = http.createServer(app);
-
-app.get("/", (request, response) => {
-  response.sendStatus(200);
-});
-app.listen(process.env.PORT);
-setInterval(() => {
-  http.get(`http://${process.env.PROJECT_DOMAIN}.glitch.me/`);
-}, 280000);
   
 // Init discord giveaways 
 const { GiveawaysManager } = require('discord-giveaways');
@@ -77,4 +79,4 @@ fs.readdir("./commands/", (_err, files) => {
 });
 
 // Login through the client 
-  client.login(process.env.TOKEN);
+  client.login(client.config.token);
