@@ -3,7 +3,7 @@
 **IN CONFIG.JSON DO NOT CHANGE ANY VARIABLE THE everyoneMention VARIABLE IS FOR THE EVERYONE MENTION WHEN A NEW GIVEAWAY OCCURS AND EVERYTHING ELSE IS SELF EPLAINATORY JUST CHANGE THE VALUES 
 INSIDE "" TO MAKE YOUR BOT FUNCTION PROPERLY!**
 # Links
-- [Support Server Link](https://dsc,gg/clueforce)
+- [Support Server Link](https://dsc.gg/clueforce)
 # Copyright 
 Copyright 2020 © All RIghts are Reserved | If you are using any part of code please give me credits for the same. Thanks
 
@@ -26,5 +26,5 @@ MAKE A NEW ONE USING MY TUTORIAL :D``**
  "youtube-api": "Youtube-Api-Key-Here",
  "admins": "User can use add money"
 }
-
+```
 if done, type `npm i` and after that type` node index.js`
