@@ -16,9 +16,15 @@ IF YOU WANT A SCRIPT THAT PREVENTS THIS JOIN THE SERVER ABOVE AND DM 0_0#6666 TH
 MAKE A NEW ONE USING MY TUTORIAL :D``**
 ``IF YOU DO NOT USE A COMMAND EVERY HALF AN HOUR ON REPL.IT HOSTING THE BOT DIES, CAN BE REVIVED BY RESTARTING IT``
 
-# Setup .env
-`TOKEN=YourTokenBot`
-
-`PROJECT_DOMAIN=YourProjectDomain (if You Host on Glitch)`
+# Setup Config.Json
+```
+{
+ "token": "Your-Bot-Token-Here",
+ "prefix": "Your-Prefix-Bot-Here",
+ "mentionEveryone": false,
+ "hostedBy": true
+ "youtube-api": "Youtube-Api-Key-Here",
+ "admins": "User can use add money"
+}
 
 if done, type `npm i` and after that type` node index.js`
