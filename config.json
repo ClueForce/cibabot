@@ -1,5 +1,8 @@
 {
+  "token": "Your Token Bot Here",
   "prefix": "Your Prefix Here",
   "everyoneMention": false,
-  "hostedBy": true
+  "hostedBy": true,
+  "youtube-api": "Youtube Api Key Here",
+  "admins": "User can use add money (ID)"
 }
